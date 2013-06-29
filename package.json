@@ -1,0 +1,33 @@
+{
+  "name": "karma-ios-launcher",
+  "version": "0.0.0",
+  "description": "Karma launcher for the Xcode iOS Simulator",
+  "main": "index.js",
+  "scripts": {
+    "test": "coffeelint -r src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xdissent/karma-ios-launcher.git"
+  },
+  "keywords": [
+    "karma",
+    "test",
+    "ios",
+    "iphone",
+    "ipad"
+  ],
+  "author": "Greg Thornton <xdissent@me.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xdissent/karma-ios-launcher/issues"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.6.3",
+    "groc": "~0.4.0",
+    "coffeelint": "~0.5.6"
+  },
+  "dependencies": {
+    "iosctrl": "git+https://github.com/xdissent/iosctrl.git"
+  }
+}
