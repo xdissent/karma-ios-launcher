@@ -6,12 +6,14 @@ class IOSLauncher
   constructor: (@id) ->
     @name = 'iOS'
     @captured = false
+    @sim = new iosctrl.Simulator
 
   start: (url) ->
-    @ios = iosctrl "#{url}?id=#{@id}"
+    @sim.open("#{url}?id=#{@id}").fail (err) -> throw err
+
   kill: (done) ->
-    @ios.close() unless @ios.state is 'ready'
-    setTimeout done, 10000
+    return done() if @sim.state is 'ready'
+    @sim.close().then done, (err) -> throw err
 
   markCaptured: -> @captured = true
   isCaptured: -> @captured
