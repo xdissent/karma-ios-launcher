@@ -31,5 +31,8 @@
   },
   "dependencies": {
     "iosctrl": "~0.0.1"
-  }
+  },
+  "peerDependencies": {
+    "karma": "~0.9"
+  },
 }
