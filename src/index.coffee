@@ -8,7 +8,6 @@ class IOSLauncher
     @captured = false
 
   start: (url) ->
-    console.log @
     @ios = iosctrl "#{url}?id=#{@id}"
   kill: (done) ->
     @ios.close() unless @ios.state is 'ready'
