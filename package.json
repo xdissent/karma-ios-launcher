@@ -28,6 +28,6 @@
     "coffeelint": "~0.5.6"
   },
   "dependencies": {
-    "iosctrl": "git+https://github.com/xdissent/iosctrl.git"
+    "iosctrl": "~0.0.1"
   }
 }
