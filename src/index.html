@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="en"><head><title>src/index</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="src/index"><meta name="groc-project-path" content="src/index.coffee"><meta name="groc-github-url" content="https://github.com/xdissent/karma-ios-launcher"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/xdissent/karma-ios-launcher/blob/master/src/index.coffee">src/index.coffee</a></div></div><div id="document"><div class="segment"><div class="comments"><div class="wrapper"><h1 id="index">index</h1></div></div></div><div class="segment"><div class="code"><div class="wrapper"><span class="nv">iosctrl = </span><span class="nx">require</span> <span class="s">&#39;iosctrl&#39;</span>
+
+<span class="k">class</span> <span class="nx">IOSLauncher</span>
+  <span class="nv">constructor: </span><span class="nf">(@id) -&gt;</span>
+    <span class="vi">@name = </span><span class="s">&#39;iOS&#39;</span>
+    <span class="vi">@captured = </span><span class="kc">false</span>
+    <span class="vi">@sim = </span><span class="k">new</span> <span class="nx">iosctrl</span><span class="p">.</span><span class="nx">Simulator</span>
+
+  <span class="nv">start: </span><span class="nf">(url) -&gt;</span>
+    <span class="nx">@sim</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s">&quot;</span><span class="si">#{</span><span class="nx">url</span><span class="si">}</span><span class="s">?id=</span><span class="si">#{</span><span class="nx">@id</span><span class="si">}</span><span class="s">&quot;</span><span class="p">).</span><span class="nx">fail</span> <span class="nf">(err) -&gt;</span> <span class="k">throw</span> <span class="nx">err</span>
+
+  <span class="nv">kill: </span><span class="nf">(done) -&gt;</span>
+    <span class="k">return</span> <span class="nx">done</span><span class="p">()</span> <span class="k">if</span> <span class="nx">@sim</span><span class="p">.</span><span class="nx">state</span> <span class="o">is</span> <span class="s">&#39;ready&#39;</span>
+    <span class="nx">@sim</span><span class="p">.</span><span class="nx">close</span><span class="p">().</span><span class="nx">then</span> <span class="nx">done</span><span class="p">,</span> <span class="nf">(err) -&gt;</span> <span class="k">throw</span> <span class="nx">err</span>
+
+  <span class="nv">markCaptured: </span><span class="nf">-&gt;</span> <span class="vi">@captured = </span><span class="kc">true</span>
+  <span class="nv">isCaptured: </span><span class="nf">-&gt;</span> <span class="nx">@captured</span>
+
+<span class="nx">exports</span><span class="p">[</span><span class="s">&quot;launcher:iOS&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;type&#39;</span><span class="p">,</span> <span class="nf">(id) -&gt;</span> <span class="k">new</span> <span class="nx">IOSLauncher</span> <span class="nx">id</span><span class="p">]</span></div></div></div></div></body></html>
