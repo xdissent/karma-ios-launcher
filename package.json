@@ -4,7 +4,8 @@
   "description": "Karma launcher for the Xcode iOS Simulator",
   "main": "index.js",
   "scripts": {
-    "test": "coffeelint -r src"
+    "test": "coffeelint -r src",
+    "prepublish": "coffee -cbo lib src"
   },
   "repository": {
     "type": "git",
