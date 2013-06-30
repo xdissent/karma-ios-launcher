@@ -60,6 +60,11 @@ Just run your tests!
 
 ```sh
 $ karma start
+INFO [karma]: Karma v0.9.3 server started at http://localhost:9876/
+INFO [launcher]: Starting browser iOS
+INFO [Mobile Safari 6.0.0 (iOS 6.1)]: Connected on socket id iDIO2uQQP4qe6dFRjn6p
+Mobile Safari 6.0.0 (iOS 6.1): Executed 1 of 1 SUCCESS (0.219 secs / 0.063 secs)
+TOTAL: 1 SUCCESS
 ```
 
 If you'd like to see the debug output from iosctrl, set the `DEBUG` 
