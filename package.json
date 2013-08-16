@@ -14,6 +14,7 @@
   "homepage": "http://xdissent.github.io/karma-ios-launcher",
   "keywords": [
     "karma",
+    "karma-plugin",
     "test",
     "ios",
     "iphone",
@@ -33,6 +34,6 @@
     "iosctrl": "~0.0.1"
   },
   "peerDependencies": {
-    "karma": "~0.9"
+    "karma": ">=0.9"
   }
 }

@@ -11,16 +11,7 @@ This Karma plugin adds a browser launcher for the Xcode iOS Simulator.
 Requirements
 ------------
 
-This module currently requires the `canary` version of Karma:
-
-```sh
-$ npm install 'karma@canary' --save-dev
-```
-
-Note that the Karma configuration file format has changed since `v0.8`. Use 
-`karma init` to generate a fresh config.
-
-You must also have Xcode installed as well as the iOS Simulator.
+You must have Xcode installed as well as the iOS Simulator.
 
 
 Installation
@@ -41,8 +32,8 @@ $ npm install 'git+https://github.com/xdissent/karma-ios-launcher.git' --save-de
 Add `iOS` to the `browsers` key in your Karma configuration:
 
 ```coffee
-module.exports = (karma) ->
-  karma.configure
+module.exports = (config) ->
+  config.set
 
     # Start these browsers:
     browsers = [
