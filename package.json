@@ -1,6 +1,6 @@
 {
   "name": "karma-ios-launcher",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Karma launcher for the Xcode iOS Simulator",
   "main": "index.js",
   "scripts": {
