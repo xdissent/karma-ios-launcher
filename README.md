@@ -43,6 +43,27 @@ module.exports = (config) ->
     # ...
 ```
 
+Or create a custom browser launcher configuration, passing options directly to
+`iosctrl`:
+
+```coffee
+module.exports = (config) ->
+  config.set
+
+    # Start these browsers:
+    browsers = [
+      'iPad'
+    ]
+
+    customLaunchers:
+      iPad:
+        base: 'iOS'
+        family: 'iPad'
+        sdk: '6.1'
+
+    # ...
+```
+
 
 Usage
 -----
