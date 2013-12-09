@@ -1,0 +1,19 @@
+{
+  "name": "karma-ios-launcher-example",
+  "description": "iOS for Karma example",
+  "keywords": [
+    "karma",
+    "ios-launcher",
+    "lorem"
+  ],
+  "version": "0.0.0",
+  "author": {
+    "name": "Greg Thornton",
+    "email": "xdissent@me.com",
+    "url": "http://xdissent.com"
+  },
+  "devDependencies": {
+    "karma": ">=0.9"
+  },
+  "private": true
+}

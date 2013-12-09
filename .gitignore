@@ -2,3 +2,4 @@
 /lib
 /doc
 .DS_Store
+/example/node_modules
