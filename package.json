@@ -31,7 +31,9 @@
     "coffeelint": "~0.5.6"
   },
   "dependencies": {
-    "iosctrl": "~0.0.1"
+    "iosctrl": "~0.1.0",
+    "q": "~0.9.6",
+    "fs-extra": "~0.8.1"
   },
   "peerDependencies": {
     "karma": ">=0.9"
