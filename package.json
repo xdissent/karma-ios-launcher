@@ -31,7 +31,7 @@
     "coffeelint": "~0.5.6"
   },
   "dependencies": {
-    "iosctrl": "~0.1.0",
+    "iosctrl": "~0.1.1",
     "q": "~0.9.6",
     "fs-extra": "~0.8.1"
   },
